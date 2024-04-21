@@ -14,7 +14,7 @@ class CreateTypesOfPetsTable extends Migration
     public function up()
     {
         Schema::create('types_of_pets', function (Blueprint $table) {
-            $table->string("type")->unique();
+            $table->string("type", 50)->unique(); // added length constraint
         });
     }
 
